@@ -1,1 +1,2 @@
 Nome: esse | Preço: R$ 0,00 | Quantidade: 0
+Nome: novo | Preço: R$ 0,00 | Quantidade: 0

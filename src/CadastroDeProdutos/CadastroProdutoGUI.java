@@ -237,9 +237,10 @@ class Produto {
     public static Produto fromString(String linha) {
         String[] partes = linha.split("\\|");
         String nome = partes[0].split(":")[1].trim();
-        double preco = Double.parseDouble(partes[1].split("R\\$")[1].trim());
+        // Substituir a vírgula por ponto para a conversão correta
+        String precoString = partes[1].split("R\\$")[1].trim().replace(',', '.');
+        double preco = Double.parseDouble(precoString);
         int quantidade = Integer.parseInt(partes[2].split(":")[1].trim());
         return new Produto(nome, preco, quantidade);
     }
 }
-
